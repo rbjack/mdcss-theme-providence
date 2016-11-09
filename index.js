@@ -8,7 +8,7 @@ module.exports = function (themeopts) {
 	themeopts = Object(themeopts);
 
 	// set theme logo
-	themeopts.logo = themeopts.logo || 'mdcss-logo.png';
+	themeopts.logo = themeopts.logo || 'logo.png';
 
 	// set theme title
 	themeopts.title = themeopts.title || 'Style Guide';
@@ -20,7 +20,7 @@ module.exports = function (themeopts) {
 	themeopts.js = themeopts.js || [];
 
   // set theme masthead color
-	themeopts.color = themeopts.color || ['#4078c0'];
+	themeopts.color = themeopts.color || ['#ffffff'];
 
   // set navigation links
 	themeopts.nav = themeopts.nav || [];

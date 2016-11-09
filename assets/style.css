@@ -6,7 +6,7 @@
 .docs-example {
   display: flex;
   align-items: center;
-  margin: 0 auto;
+  margin: 0 auto 16px;
   justify-content: center;
   position: relative;
 }
