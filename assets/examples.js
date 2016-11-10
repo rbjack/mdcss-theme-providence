@@ -132,6 +132,7 @@ examples.lang = {
 		var documentElement = idoc.documentElement;
 		var scrollHeight;
 
+		/*
 		var iresize = function resize() {
 			var currentScrollHeight = documentElement.scrollHeight;
 
@@ -143,14 +144,10 @@ examples.lang = {
 				style.height = documentElement.scrollHeight + (iframe.offsetHeight - iwin.innerHeight) + 'px';
 			}
 		}
-
-    /*iwin.addEventListener('load', function () {
-      resize();
-    });*/
 		
 		iwin.addEventListener('load', function() {
-
 			iresize();
 		});
+		*/
 	}
 };

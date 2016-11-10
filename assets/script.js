@@ -1,6 +1,44 @@
 /* eslint-env browser */
 /* global examples, Prism */
 
+var iFrameTimeoutID;
+
+(function() {
+	var throttle = function(type, name, obj) {
+		obj = obj || window;
+		var running = false;
+		var func = function() {
+			if (running) { return; }
+			running = true;
+			requestAnimationFrame(function() {
+				obj.dispatchEvent(new CustomEvent(name));
+				running = false;
+			});
+		};
+		obj.addEventListener(type, func);
+	};
+
+	/* init - you can init any event */
+	throttle("resize", "optimizedResize");
+})();
+
+function afterRender() {
+	window.clearTimeout(iFrameTimeoutID);
+	console.log('ping');
+	resizeIFrameToFitContent();
+}
+
+function resizeIFrameToFitContent() {
+	var iframes = document.querySelectorAll("iframe");
+  for( var i = 0; i < iframes.length; i++) {
+     setIFrameHeight( iframes[i] );
+  }
+}
+
+function setIFrameHeight( iFrame ) {
+	iFrame.style.height = iFrame.contentWindow.document.body.scrollHeight + "px";
+}
+
 document.addEventListener('DOMContentLoaded', function () {
 	Array.prototype.forEach.call(document.querySelectorAll('pre code[class^="lang"]'), function (code) {
 		// set pre, wrap, opts, and get meta data from code
@@ -31,4 +69,11 @@ document.addEventListener('DOMContentLoaded', function () {
 			examples.lang[conf.example](pre, text, conf);
 		}
 	});
+
+	iFrameTimeoutID = window.setTimeout(afterRender, 10);
+});
+
+// handle event
+window.addEventListener("optimizedResize", function() {
+	resizeIFrameToFitContent();
 });
