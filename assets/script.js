@@ -24,7 +24,6 @@ var iFrameTimeoutID;
 
 function afterRender() {
 	window.clearTimeout(iFrameTimeoutID);
-	console.log('ping');
 	resizeIFrameToFitContent();
 }
 
