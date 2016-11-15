@@ -35,6 +35,7 @@ function resizeIFrameToFitContent() {
 }
 
 function setIFrameHeight( iFrame ) {
+	iFrame.style.height = 0;
 	iFrame.style.height = iFrame.contentWindow.document.body.scrollHeight + "px";
 }
 
@@ -69,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 	});
 
-	iFrameTimeoutID = window.setTimeout(afterRender, 10);
+	iFrameTimeoutID = window.setTimeout(afterRender, 500);
 });
 
 // handle event
