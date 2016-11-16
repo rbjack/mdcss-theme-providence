@@ -11,6 +11,10 @@
   position: relative;
 }
 
+.docs-example + pre {
+  margin-top: -17px;
+}
+
 .docs-iframe {
 }
 

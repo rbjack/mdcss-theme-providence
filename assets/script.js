@@ -31,12 +31,17 @@ function resizeIFrameToFitContent() {
 	var iframes = document.querySelectorAll("iframe");
   for( var i = 0; i < iframes.length; i++) {
      setIFrameHeight( iframes[i] );
+     setAttributeSrolling( iframes[i] );
   }
 }
 
 function setIFrameHeight( iFrame ) {
 	iFrame.style.height = 0;
 	iFrame.style.height = iFrame.contentWindow.document.body.scrollHeight + "px";
+}
+
+function setAttributeSrolling( iFrame ) {
+	iFrame.setAttribute('scrolling', 'no');
 }
 
 document.addEventListener('DOMContentLoaded', function () {

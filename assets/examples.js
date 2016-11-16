@@ -75,6 +75,9 @@ examples.lang = {
     var preview = wrap.insertBefore(document.createElement('div'), pre);
     preview.className  = 'docs-example clearfix';
 
+    // remove
+    wrap.removeChild(pre);
+
     var resize = preview.appendChild(document.createElement('div'));
     resize.className = 'docs-resize';
 
@@ -124,6 +127,7 @@ examples.lang = {
 			idoc.documentElement.setAttribute('style', examples.htmlcss);
 			idoc.body.setAttribute('style', examples.bodycss);
       iframe.setAttribute('class', 'docs-iframe clearfix');
+      iframe.setAttribute('scrolling', 'no');
 		});
 
 		if (conf.width) style.width = String(conf.width);
