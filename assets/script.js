@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 	});
 
-	iFrameTimeoutID = window.setTimeout(afterRender, 1000);
+	iFrameTimeoutID = window.setTimeout(afterRender, 1200);
 });
 
 // handle event
