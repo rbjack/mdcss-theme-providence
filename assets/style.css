@@ -9,6 +9,7 @@
   margin: 0 auto 16px;
   justify-content: center;
   position: relative;
+  background-color: #f7fbfd; /* contrast agaist iFrame body background-color */
 }
 
 .docs-example + pre {

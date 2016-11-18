@@ -122,9 +122,12 @@ examples.lang = {
 
 		idoc.close();
 
+		idoc.getElementsByTagName('html')[0].setAttribute('class', 'no-js');
+
 		// add default block styles to iframe dom
 		iwin.addEventListener('load', function(){
 			idoc.documentElement.setAttribute('style', examples.htmlcss);
+			//idoc.getElementsByTagName('html')[0].setAttribute('class', 'no-js');
 			idoc.body.setAttribute('style', examples.bodycss);
       iframe.setAttribute('class', 'docs-iframe clearfix');
       iframe.setAttribute('scrolling', 'no');
