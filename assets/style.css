@@ -7,9 +7,10 @@
   display: flex;
   align-items: center;
   margin: 0 auto 16px;
-  justify-content: center;
+  /*justify-content: center;*/
   position: relative;
   background-color: #f7fbfd; /* contrast agaist iFrame body background-color */
+  overflow: hidden;
 }
 
 .docs-example + pre {
@@ -24,12 +25,15 @@
 
 .docs-resize {
   width: 100%;
+  overflow-x: auto;
 }
 
 .docs-iframe {
   border: 0;
   height: auto;
   width: 100%;
+  min-width: 768px; /* remove if mobile display is used */
+
   /* min-width: 320px; */
   /* max-width: 100%; */
 }
