@@ -1,5 +1,5 @@
 {
-  "name": "mdcss-theme-github",
+  "name": "mdcss-theme-providence",
   "version": "2.4.2",
   "description": "GitHub flavored theme for mdcss",
   "keywords": [
@@ -8,9 +8,9 @@
     "github",
     "theme"
   ],
-  "author": "Jonathan Neal <jonathantneal@hotmail.com> (http://jonathantneal.com)",
+  "author": "Richard Jackson",
   "license": "CC0-1.0",
-  "repository": "jonathantneal/mdcss-github-theme",
+  "repository": "rbjack/mdcss-theme-providence/",
   "bugs": "https://github.com/jonathantneal/mdcss-github-theme/issues",
   "homepage": "https://github.com/jonathantneal/mdcss-github-theme#readme",
   "dependencies": {
