@@ -11,8 +11,6 @@
   "author": "Richard Jackson",
   "license": "CC0-1.0",
   "repository": "rbjack/mdcss-theme-providence/",
-  "bugs": "https://github.com/jonathantneal/mdcss-github-theme/issues",
-  "homepage": "https://github.com/jonathantneal/mdcss-github-theme#readme",
   "dependencies": {
     "ejs": "^2.4.1",
     "object-assign": "^4.0.1"
